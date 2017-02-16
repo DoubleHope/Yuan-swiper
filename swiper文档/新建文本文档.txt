@@ -1,0 +1,15 @@
+swiper中文网：http://www.swiper.com.cn/
+
+<script>        
+  var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'vertical',//Slides的滑动方向，可设置水平(horizontal)或垂直(vertical)。默认：horizontal
+    loop: true,
+	effect : 'cube',  //立方体切换
+	cube: {
+	  slideShadows: true,  //开启slide阴影。默认 true。
+	  shadow: true,   //开启投影。默认 true。
+	  shadowOffset: 100, //投影距离。默认 20，单位px。
+	  shadowScale: 0.6 //投影缩放比例。默认0.94
+	}
+  })
+</script>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/swiper3.1.0.min.css">
+<style>
+.swiper-container{ width:100%; height:320px; position:absolute;}
+.swiper-slide{color:#fff;text-align:center;}
+.blue-slide{background: #4390EE;}
+.red-slide {background: #CA4040;}
+.orange-slide {background: #FF8604;}
+.green-slide{background:#49a430;}
+.pink-slide{background:#973e76;}
+
+.swiper-container h2 { margin:10px;}
+#ok { display:block; width:80px; height:35px; background:#e90; color:#fff; border:0; text-align:center; margin:0 auto; margin-top:10px;}
+</style>
+</head>
+
+<body>
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide blue-slide stop-swiping">
+    	<h2>注册协议</h2>
+        <textarea name="" cols="80" rows="12">
+            尊敬的顾客，欢迎注册成为本商城会员用户。本商城依据下列条款及条件为您提供会员服务，此条款为本商城与本商城用户之间的服务协议，具有合同效力。请您务必在注册之前认真阅读全部协议内容，如有任何疑问，可向本商城客服人员进行咨询。 
+    
+    一、协议说明 
+    
+    1、协议双方为本商城与本商城用户；
+    2、无论用户事实上是否在注册之前认真阅读了本协议，只要用户按照本商城网站注册程序成功注册为会员用户，您的行为表示您同意并签署了本协议；
+    3、本协议所称之“会员”，指依本站所定之会员加入程序顺利完成者； 
+    4、经本站认定为不适合加入会员者，本站保留有可拒绝其加入会员资格之权利；已加入会员者，本网站亦保留有解除其会员资格之权利； 
+    5、本协议修订时，将会在本商城网站上进行告知； 
+    6、本商城各项服务的所有权、运作权、条款解释权、未尽事宜解释权归本商城所有。 
+        </textarea>
+       
+        <input name="ok" type="button" id="ok" value="同意">
+        
+    </div>
+    <div class="swiper-slide red-slide stop-swiping">
+    	用户名：<input type="text" id="user"><br />
+        密码：<input type="password" id="pass"><Br />
+         <input name="ok" type="button" class="pre" value="上一步">
+         <input name="ok" type="button" class="next" value="下一步">
+    </div>
+    <div class="swiper-slide orange-slide stop-swiping">
+    
+        e-mail：<input type="text" id="mail"><br />
+        电话：<input type="password" id="phone"><br />
+        <input name="ok" type="button" class="pre" value="上一步">
+        <input name="ok" type="button" class="next" value="下一步">
+    </div>
+    <div class="swiper-slide green-slide stop-swiping">
+    恭喜注册成功！
+    </div>
+  </div>
+</div>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/swiper3.1.0.jquery.min.js"></script>
+<script> 
+var mySwiper = new Swiper('.swiper-container', {
+	noSwiping : true,
+	noSwipingClass : 'stop-swiping',
+})
+$('#ok').click(function()
+{
+	mySwiper.unlockSwipeToNext();
+	mySwiper.slideNext();	
+})
+
+$('.next').click(function()
+{
+	mySwiper.unlockSwipeToNext();
+	mySwiper.slideNext();	
+})
+$('.pre').click(function()
+{
+	mySwiper.unlockSwipeToPrev();
+	mySwiper.slidePrev();
+})
+
+</script>
+</body>
+</html>

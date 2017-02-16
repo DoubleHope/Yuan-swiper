@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+html,body{ width:100%; height:100%; position:relative; overflow:hidden;}
+img{ max-width:100%;}
+.swiper-container{ width:100%; height:100%; position:relative; margin:0 auto;}
+/*第一屏*/
+.s1{ background:url(../images/t1-bg.png) no-repeat center top; background-size:cover;}
+.s1-logo { position:relative; width:80%; top:22%; left:9%;}
+.s1-logo-text{ position:absolute; width:100%; top:10%; z-index:2;}
+.s1-logo-yuan{ width:90%; margin:0 auto;}
+/*第二*/
+.s2{ background:url(../images/t2-bg.png) no-repeat center top; background-size:cover;}
+.s2-person{ position:relative; width:25%; left:37%; top:7%;}
+.s2-text{ position:absolute; width:50%; left:26%; top:63%;}
+/*第三*/
+.s3{ background:url(../images/t3-bg.png) no-repeat center top; background-size:cover;}
+.s3-person { position:absolute; width:50%; left:25%; top:10%;}
+.s3-text{ position:absolute; width:50%; left:25%; top:55%;}
+/*第四*/
+.s4{ background-color:#F03;}
+.s4-text1{ position:absolute; width:70%; left:15%; top:10%;}
+.s4-text2{ position:absolute; top:40%; width:70%; left:15%;}
+.s4-map{ position:absolute; top:65%; width:70%; left:15%;}
+/*第五*/
+.s5{ background-color:#F33;}
+.s5-person1{ position:absolute; width:50%; left:25%;}
+.s5-person2{ position:absolute; width:50%; top:10%; left:25%;}
+.s5-text{ position:absolute; top:60%; width:50%; left:25%;}
+/*第6*/
+.s6{ background-color:#63C;}
+.s6-person1{ position:absolute; width:55%; left:25%; top:10%;}
+.s6-person2{ position:absolute; top:15%; width:55%; left:27%;}
+.s6-text{ position:absolute; top:60%; width:50%; left:25%;}
+/*第七*/
+.s7{ background-color:#339;}
+.s7-person1{ position:absolute; width:60%; left:20%;}
+.s7-person2{ position:absolute; top:8%; width:50%; left:27%;}
+.s7-text{ position:absolute; top:55%; width:40%; left:30%;}
+/*第八*/
+.s8 { background-color:#063;}
+.s8-person1{ position:absolute; width:70%; left:15%; top:10%;}
+.s8-person2{ position:absolute; top:15%; width:50%; left:27%;}
+.s8-text{ position:absolute; top:70%; width:40%; left:30%;}
+/*第九*/
+.s9 { background-color:#06F;}
+.s9-person1{ position:absolute; width:60%; left:20%;}
+.s9-person2{ position:absolute; top:80%; width:70%; left:15%;}
+/*第十*/
+.s10 { background:url(../images/t10-bg.png) no-repeat center top; background-size:cover;}
+.s10-person1{ position:absolute; width:70%; left:15%; top:4%;}
+.s10-person2{ position:absolute; top:60%; width:35%; left:35%;}
+.s10-person3{ position:absolute; width:45%; left:30%; top:70%}
+.s10-person4{ position:absolute; top:80%; width:35%; left:35%;}
+.s10-person5{ position:absolute; top:38%; left:10%; color:#f60; text-align:center; line-height:1.5em;}
+/*背景音乐*/
+.my-music{ background:url(../images/music.gif); width:60px; height:60px; z-index:99; position:absolute; background-size:cover; top:10px; right:10px;}
+.music{ background:url(../images/music_off.png); width:44px; height:44px; z-index:99; position:absolute; background-size:cover; top:15px; right:15px; animation:rotating 1.2s linear infinite;-webkit-animation:rotating 1.2s linear infinite;}
+
+.off { background:none;}
+.off .music{ animation:none; -webkit-animation:none;}
+.iconup{ background:url(../images/icon_up.png); width:30px; height:16px; position:absolute; z-index:22; top:93%; left:46%; background-size:cover; animation: iconUp 1.2s ease infinite; -webkit-animation: iconUp 1.2 ease infinite;}
+@keyframes rotating
+{
+	from{ transform:rotate(0deg)}
+	to{ transform:rotate(360deg)}
+	
+	}
+	
+@-webkit-keyframes rotating
+{
+	from{ transform:rotate(0deg)}
+	to{ transform:rotate(360deg)}
+	
+	}
+@-webkit-keyframes iconUp{
+	0% { transform:translateY(100%); opacity:0}
+	50%{ transform:translateY(0); opacity:1}
+	100%{ transform:translateY(-100%); opacity:0}
+	
+	}

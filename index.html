@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>swiper-动画</title>
+
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/swiper3.1.0.min.css">
+<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/swiper3.1.0.jquery.min.js"></script>
+<script src="js/swiper.animate1.0.2.min.js"></script>
+</head>
+
+<body>
+
+<div class="swiper-container">
+	<div class="swiper-wrapper">
+    <!--1-->
+    	<div class="swiper-slide s1">
+        	<div class="s1-logo">
+            	<div class="ani s1-logo-text" swiper-animate-effect="bounceIn"><img src="images/t1-text.png"/></div>
+                <div class="ani s1-logo-yuan" swiper-animate-effect="bounceInDown"><img src="images/t1-yuan.png"/></div>
+            </div>
+        </div>
+        <!--2-->
+    <div class="swiper-slide s2">
+        	
+            	<div class="ani s2-person" swiper-animate-effect="bounceIn"><img src="images/t2-2.png"/></div>
+                <div class="ani s2-text" swiper-animate-effect="bounceInDown"><img src="images/t2-3.png"/></div>
+         
+    </div>
+    <!--3-->
+    <div class="swiper-slide s3">
+        	
+            	<div class="ani s3-person" swiper-animate-effect="bounceIn"><img src="images/t3-2.png"/></div>
+                <div class="ani s3-text" swiper-animate-effect="slideInLeft"><img src="images/t3-1.png"/></div>
+         
+    </div>
+    <!--4-->
+     <div class="swiper-slide s4">
+        		<div class="ani s4-text1" swiper-animate-effect="bounceIn"><img src="images/t4-1.png"/></div>
+            	<div class="ani s4-text2" swiper-animate-effect="slideInLeft"><img src="images/t4-2.png"/></div>
+                <div class="ani s4-map" swiper-animate-effect="slideInRight"><img src="images/t4-3.png"/></div>
+         
+    </div>
+    <!--5-->
+    <div class="swiper-slide s5">
+        		<div class="ani s5-person1" swiper-animate-effect="zoomIn"><img src="images/t5-1.png"/></div>
+            	<div class="ani s5-person2" swiper-animate-effect="rotateInDownLeft"><img src="images/t5-2.png"/></div>
+                <div class="ani s5-text" swiper-animate-effect="slideInRight"><img src="images/t5-3.png"/></div>
+         
+    </div>
+    <!--6-->
+     <div class="swiper-slide s6">
+        		<div class="ani s6-person1" swiper-animate-effect="zoomInDown"><img src="images/t6-1.png"/></div>
+            	<div class="ani s6-person2" swiper-animate-effect="zoomInUp"><img src="images/t6-2.png"/></div>
+                <div class="ani s6-text" swiper-animate-effect="slideInRight"><img src="images/t6-3.png"/></div>
+         
+    </div>
+    <!--7-->
+	<div class="swiper-slide s7">
+        		<div class="ani s7-person1" swiper-animate-effect="lightSpeedIn"><img src="images/t7-1.png"/></div>
+            	<div class="ani s7-person2" swiper-animate-effect="rotateInDownLeft"><img src="images/t7-2.png"/></div>
+                <div class="ani s7-text" swiper-animate-effect="bounceInDown"><img src="images/t7-3.png"/></div>
+         
+    </div>
+    <!--8-->
+    <div class="swiper-slide s8">
+        		<div class="ani s8-person1" swiper-animate-effect="rubberBand"><img src="images/t8-1.png"/></div>
+            	<div class="ani s8-person2" swiper-animate-effect="pulse"><img src="images/t8-2.png"/></div>
+                <div class="ani s8-text" swiper-animate-effect="shake"><img src="images/t8-3.png"/></div>
+         
+    </div>
+    <!--9-->
+    <div class="swiper-slide s9">
+        		<div class="ani s9-person1" swiper-animate-effect="rollIn"><img src="images/t9-1.png"/></div>
+            	<div class="ani s9-person2" swiper-animate-effect="zoomInUp"><img src="images/t9-2.png"/></div>
+             
+    </div>
+    <!--10-->
+	<div class="swiper-slide s10">
+        		<div class="ani s10-person1" swiper-animate-effect="zoomInDown"><img src="images/t10-1.png"/></div>
+                <div class="ani s10-person5" swiper-animate-effect="pulse">
+                	<h2>XXX股份有限公司招聘</h2>
+                    电话：<a>13111112222</a>汪小姐<br/>
+                    邮箱：<a>123@qq.com</a>
+                
+                </div>
+            	<div class="ani s10-person2" swiper-animate-effect="zoomInLeft"><img src="images/t10-2.png"/></div>
+             	<div class="ani s10-person3" swiper-animate-effect="zoomIn"><img src="images/t10-3.png"/></div>
+            	<div class="ani s10-person4" swiper-animate-effect="zoomInRight"><img src="images/t10-4.png"/></div>
+    </div>
+
+
+</div>
+<div class="my-music">
+	<div class="music"></div>
+    <audio src="images/3.mp3" id="media" autoplay="autoplay" loop></audio>
+	
+</div>
+<div class="iconup"></div>
+</div>
+<script>        
+  var mySwiper = new Swiper ('.swiper-container', {
+	  onInit: function(swiper){ //初始化时
+		swiperAnimateCache(swiper); //隐藏动画元素 
+		swiperAnimate(swiper); //初始化完成开始动画
+	  }, 
+	  onSlideChangeEnd: function(swiper){ 
+		swiperAnimate(swiper); //slide切换结束时也运行当前动画
+		
+	  },	 
+	direction: 'vertical', //Slides的滑动方向，可设置水平(horizontal)或垂直(vertical)。默认：horizontal
+	initialSlide:0
+  })        
+</script>
+<script>
+	$(function(){
+	 
+	$('.my-music').click(function(){
+		$(this).toggleClass("off");
+	}) 
+	})
+	if (mySwiper.isEnd){
+		$('.iconup').hide();
+		}else
+		{
+			$('.iconup').show();
+			}
+	
+	
+	var audio = $('#media');
+var isPlaying = false;
+function playAudio() {
+    var audio = $('#media');
+    if (audio.attr('src') == undefined) {
+        audio.attr('src', audio.data('src'));
+    }
+    audio[0].play();
+    isPlaying = true;
+}
+function pauseAudio(){
+	//ios微信框架固定底部出现偏移
+	setTimeout(function(){
+	$(window).scrollTop(1);
+	},0);
+	audio[0].pause();
+	isPlaying = false;
+}
+function audio_switch() {
+    if (isPlaying) {
+        //关闭声音
+        pauseAudio();
+    }
+    //开启声音
+    else {
+        playAudio();
+    }
+}
+$(function(){
+	playAudio();
+	$(".my-music").on('click', audio_switch);
+})
+
+
+</script>
+</body>
+</html>

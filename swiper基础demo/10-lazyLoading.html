@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/swiper3.1.0.min.css">
+<style>
+.swiper-container{ width:50%; height:40%; position:absolute;}
+.swiper-slide{color:#fff;line-height:300px;text-align:center;font-size:50px;}
+.blue-slide{background: #4390EE;}
+.red-slide {background: #CA4040;}
+.orange-slide {background: #FF8604;}
+.green-slide{background:#49a430;}
+.pink-slide{background:#973e76;}
+</style>
+</head>
+
+<body>
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img data-src="image/1.jpg"  class="swiper-lazy">
+    <div class="swiper-lazy-preloader"></div>
+    </div>
+    <div class="swiper-slide"><img data-src="image/2.jpg"  class="swiper-lazy">
+    <div class="swiper-lazy-preloader"></div>
+    </div>
+    <div class="swiper-slide"><img data-src="image/3.jpg"  class="swiper-lazy" >
+    <div class="swiper-lazy-preloader"></div>
+    </div>
+    <div class="swiper-slide"><img data-src="image/4.jpg"  class="swiper-lazy">
+    <div class="swiper-lazy-preloader"></div>
+    </div>
+    <div class="swiper-slide"><img data-src="image/5.jpg"  class="swiper-lazy">
+    <div class="swiper-lazy-preloader"></div>
+    </div>
+    <div class="swiper-slide"><img data-src="image/6.jpg"  class="swiper-lazy">
+    <div class="swiper-lazy-preloader"></div>
+    </div>
+    <div class="swiper-slide"><img data-src="image/7.jpg"  class="swiper-lazy">
+    <div class="swiper-lazy-preloader"></div>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+<script src="js/swiper3.1.0.jquery.min.js"></script>
+<script> 
+var mySwiper = new Swiper('.swiper-container', {
+	slidesPerView : 1, 
+	pagination : '.swiper-pagination', //分页器
+	paginationClickable :true, //分页器可以点击切换
+	prevButton:'.swiper-button-prev',  //后退按钮
+	nextButton:'.swiper-button-next',
+	//设为true开启图片延迟加载，使preloadImages无效。
+	//需要将图片img标签的src改写成data-src，并且增加类名swiper-lazy。
+	lazyLoading : true,
+	loop:true,
+})
+</script>
+</body>
+</html>

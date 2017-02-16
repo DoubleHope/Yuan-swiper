@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/swiper3.1.0.min.css">
+<style>
+.swiper-container{ width:50%; height:40%; position:absolute;}
+.swiper-slide{color:#fff;line-height:300px;text-align:center;font-size:50px;}
+.blue-slide{background: #4390EE;}
+.red-slide {background: #CA4040;}
+.orange-slide {background: #FF8604;}
+.green-slide{background:#49a430;}
+.pink-slide{background:#973e76;}
+</style>
+</head>
+
+<body>
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide blue-slide">slider1</div>
+    <div class="swiper-slide red-slide">slider2</div>
+    <div class="swiper-slide orange-slide">slider3</div>
+    <div class="swiper-slide green-slide">slider4</div>
+    <div class="swiper-slide pink-slide">slider5</div>
+  </div>
+</div>
+<script src="js/swiper3.1.0.jquery.min.js"></script>
+<script> 
+var mySwiper = new Swiper('.swiper-container', {
+	initialSlide :2,//设定初始化时slide的索引. 最开始显示第几个滑块
+	direction : 'horizontal',//Slides的滑动方向，可设置水平(horizontal)或垂直(vertical)。默认：horizontal
+	speed:300,//滑动速度，即slider自动滑动开始到结束的时间（单位ms）。默认：300
+	autoplay : 1000,//自动切换,以及每隔 多久 切换一次 //用户操作swiper之后会自动取消自动切换
+	autoplayDisableOnInteraction : false,//用户操作swiper之后，是否禁止autoplay。false为不禁止
+	grabCursor : true,//鼠标覆盖Swiper时指针会变成手掌形状 // swiper主要用于移动端，这条意义不大
+	width : 100,
+	//slidesOffsetBefore : 100, //设左边是正值，右边给负值及可
+	
+})
+</script>
+</body>
+</html>

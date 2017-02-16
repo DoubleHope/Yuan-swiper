@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/swiper3.1.0.min.css">
+<style>
+.swiper-container{ width:50%; height:40%; position:absolute; border:1px solid #ccc;}
+.swiper-slide{line-height:30px;text-align:center;font-size:20px;}
+.kuang{ border:1px solid #ccc; height:38px; position:absolute; top:43%; width:100%; left:0;}
+</style>
+</head>
+
+<body>
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">00</div>
+    <div class="swiper-slide">01</div>
+    <div class="swiper-slide">02</div>
+    <div class="swiper-slide">03</div>
+    <div class="swiper-slide">04</div>
+    <div class="swiper-slide">05</div>
+    <div class="swiper-slide">06</div>
+    <div class="swiper-slide">07</div>
+    <div class="swiper-slide">08</div>
+    <div class="swiper-slide">09</div>
+    <div class="swiper-slide">10</div>
+    <div class="swiper-slide">11</div>
+    <div class="swiper-slide">12</div>
+    <div class="swiper-slide">13</div>
+    <div class="swiper-slide">14</div>
+    <div class="swiper-slide">15</div>
+    <div class="swiper-slide">16</div>
+    <div class="swiper-slide">17</div>
+    <div class="swiper-slide">18</div>
+    <div class="swiper-slide">19</div>
+    <div class="swiper-slide">20</div>
+    <div class="swiper-slide">21</div>
+    <div class="swiper-slide">22</div>
+    <div class="swiper-slide">23</div>
+    <div class="swiper-slide">24</div>
+  </div>
+  <div class="kuang"></div>
+</div>
+<script src="js/swiper3.1.0.jquery.min.js"></script>
+<script> 
+var mySwiper = new Swiper('.swiper-container', {
+	direction : 'vertical', //纵向
+	slidesPerView : 9,   //一页9个
+	centeredSlides : true, //当前的在中间
+	loop : true,   //循环
+	loopAdditionalSlides:12, //多加一些前后
+	freeMode : true, //自由模式
+	freeModeSticky : true, // 使得freeMode也能自动贴合。
+
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/swiper3.1.0.min.css">
+<style>
+.swiper-container{ width:50%; height:40%; position:absolute;}
+.swiper-slide{color:#fff;line-height:300px;text-align:center;font-size:50px;}
+.blue-slide{background: #4390EE;}
+.red-slide {background: #CA4040;}
+.orange-slide {background: #FF8604;}
+.green-slide{background:#49a430;}
+.pink-slide{background:#973e76;}
+</style>
+</head>
+
+<body>
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="image/1.jpg" ></div>
+    <div class="swiper-slide"><img src="image/2.jpg" ></div>
+    <div class="swiper-slide"><img src="image/3.jpg" ></div>
+    <div class="swiper-slide"><img src="image/4.jpg" ></div>
+    <div class="swiper-slide"><img src="image/5.jpg" ></div>
+    <div class="swiper-slide"><img src="image/6.jpg" ></div>
+    <div class="swiper-slide"><img src="image/7.jpg" ></div>
+  </div>
+</div>
+<script src="js/swiper3.1.0.jquery.min.js"></script>
+<script> 
+var mySwiper = new Swiper('.swiper-container', {
+slidesPerView : 1, //一页2个
+//centeredSlides : true,//当前的在中间
+slidesPerGroup : 1,//每次两个slide一起切换
+spaceBetween : 20, //slide之间的距离
+loop:true,
+})
+</script>
+</body>
+</html>

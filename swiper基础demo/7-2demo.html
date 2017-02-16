@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/swiper3.1.0.min.css">
+<style>
+.swiper-container{ width:50%; height:40%; position:absolute;}
+.swiper-slide{color:#fff;line-height:300px;text-align:center;font-size:50px;}
+.blue-slide{background: #4390EE;}
+.red-slide {background: #CA4040;}
+.orange-slide {background: #FF8604;}
+.green-slide{background:#49a430;}
+.pink-slide{background:#973e76;}
+.swiper-pagination-bullet {width: 20px;height: 20px;text-align: center;line-height: 20px;
+    font-size: 12px; color: #fff;}
+</style>
+</head>
+
+<body>
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide blue-slide">slider1</div>
+    <div class="swiper-slide red-slide">slider2</div>
+    <div class="swiper-slide orange-slide">slider3</div>
+    <div class="swiper-slide green-slide">slider4</div>
+    <div class="swiper-slide pink-slide">slider5</div>
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+<script src="js/swiper3.1.0.jquery.min.js"></script>
+<script> 
+
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        paginationBulletRender: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+        }
+    })
+    
+</script>
+</body>
+</html>

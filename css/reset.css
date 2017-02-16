@@ -1,0 +1,27 @@
+@charset "utf-8";
+html{ font-size:62.5%;}
+body{background:url(../images/bg.jpg) center top;font-family:"Microsoft YaHei","simsun",Arial; font-size:12px; line-height:1.5; color:#666; overflow-x:hidden;}
+body,form{margin:0px;padding:0px;}
+img{ border:none;vertical-align:middle;}
+a{ text-decoration:none; color:#666;}
+a:hover{ color:#a12a26 ;}
+input,textarea{ outline:none;vertical-align:middle;}
+input,textarea,select{ font-size:100%; font-family:"Microsoft YaHei","Simsun",Arial;}
+textarea{ resize:none; overflow-y:auto;}
+input[type="submit"],input[type="reset"],input[type="button"]{ cursor:pointer;}
+h1,h2,h3,h4,h5,h6{ font-family:"Microsoft YaHei","Simsun",Arial; font-weight:normal; line-height:1; padding:0; margin:0;}
+h1{ font-size:36px;}
+h2{ font-size:30px;}
+h3{ font-size:24px;}
+h4{ font-size:18px;}
+h5{ font-size:16px;}
+h6{ font-size:14px;}
+hr{ border:none;border-top:1px solid #dacab1;margin:40px 0 0;}
+li,ul{list-style:none;padding:0;margin:0}
+.reset,.reset dt,.reset dd{ padding:0; margin:0; list-style:none;}
+.clear{ clear:both; display:block; height:0; font-size:0; visibility:hidden; overflow:hidden;}
+.clearfix{ clear:both;}
+.clearfix:before{ content:"."; display:block; clear:both; height:0; font-size:0; visibility:hidden; overflow:hidden;}
+.clearfix:after{ content:"."; display:block; clear:both; height:0; font-size:0; visibility:hidden; overflow:hidden;}
+
+.wrapper{ position:relative; -webkit-transition:left .3s ease-in; transition:left .3s ease-in;}
